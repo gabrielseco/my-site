@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gabriel García Seco`,
+    title: `Gabriel García Seco`
   },
   pathPrefix: `/my-site`,
   plugins: [

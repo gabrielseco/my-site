@@ -1,16 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import styled from 'styled-components';
 import { Header, Footer } from './../components';
+import { FlexContainer, Flex } from './../components/Flexbox';
 
 import './index.css'
 
+const Main = styled(FlexContainer)`
+  min-height: 100vh;
+`;
+
 const TemplateWrapper = ({ children }) => (
-  <div style={{
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh',
-  }}>
+  <Main column>
     <Helmet
       title="Gabriel García Seco | Developer"
       meta={[
@@ -19,13 +21,11 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <div style={{
-      flex: '1'
-    }}>
+    <Flex>
       {children()}
-    </div>
+    </Flex>
     <Footer></Footer>
-  </div>
+  </Main>
 )
 
 TemplateWrapper.propTypes = {

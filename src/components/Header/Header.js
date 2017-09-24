@@ -1,23 +1,27 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import { FlexContainer } from './../Flexbox';
+import colors from './../../shared/colors';
+
+const Container = styled(FlexContainer)`
+  background: ${colors.PRIMARY_COLOR};
+  height: 70px;  
+  padding: 7px 12px;  
+`;
 
 const Title = styled.h1`
-  align-items: center;
-  background: #000;
-  color: #fff;
-  display: flex;
-  font-size: 1em;
+  color: ${colors.WHITE};
+  font-size: 1.2em;
   font-weight: 600;
-  justify-content: center;
-  height: 70px;
-  margin: 0;
-  padding: 7px 12px;
+  letter-spacing: 0.115em;
 `;
 
 
 const Header = () => (
-  <Title>Gabriel García Seco</Title>
+  <Container align="center" column justify="center">
+    <Title>Gabriel García Seco</Title>
+  </Container>
 )
 
 export default Header;
