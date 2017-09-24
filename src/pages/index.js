@@ -7,7 +7,7 @@ const Container = styled(FlexContainer)`
   height: calc(100vh - 140px);
 `;
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Container column justify="center" align="center">
     <h1>WORK IN PROGRESS!</h1>
   </Container>
